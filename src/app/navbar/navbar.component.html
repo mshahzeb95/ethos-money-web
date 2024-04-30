@@ -1,0 +1,21 @@
+<!-- navbar.component.html -->
+<header class="navigation-header">
+  <div class="nav-header">
+    <img src="{{logoSrc}}" alt="Company Logo" class="company-logo" />
+    <div class="mobile-nav-toggle" (click)="toggleNav()">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+
+    </div>
+    <nav class="navigation-menu" [ngClass]="{ 'show-nav': isNavOpen }">
+      <a [routerLink]="['/home']" class="menu-item" (click)="closeNav()">Home</a>
+      <a [routerLink]="['/our-mission']" class="menu-item" (click)="closeNav()">Our Mission</a>
+      <a [routerLink]="['/building-ethos']" class="menu-item">Building Ethos</a>
+      <a [routerLink]="['/blog']" class="menu-item">Blog</a>
+      <a [routerLink]="['/faq']" class="menu-item">Frequently Asked Questions</a>
+      <a [routerLink]="['/contact-us']" class="menu-item">Contact Us</a>
+      <button class="cta-button"><span class="button-text">Join the waitlist</span></button>
+    </nav>
+  </div>
+</header>

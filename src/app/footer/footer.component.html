@@ -1,0 +1,84 @@
+<section class="content-container">
+  <section class="header">
+
+    <img src="{{imageSrc1}}" alt="Logo description" class="logo" />
+    <img src="{{imageSrc2}}" alt="Secondary image description" class="logo-secondary" />
+
+  </section>
+  <br>
+  <main class="main-content">
+    <section [hidden]="!showNotification" class="col1">
+      <h1 class="title">Join the movement to transform banking forever.</h1>
+      <br>
+      <form [formGroup]="footerForm" class="form-main" (ngSubmit)="onSubmit()">
+        <div class="input-fields">
+          <div class="f">
+            <label for="preferredName" class="f-label">Preferred Name</label>
+            <input type="text" id="preferredName" class="input-f" placeholder="e.g. Jane Smith"
+              aria-label="Preferred Name" formControlName="preferredName" />
+            <div *ngIf="submitted && footerForm.controls['preferredName'].invalid" class="error-message">
+              Please enter a preferred name.
+            </div>
+          </div>
+          <br>
+          <div class="f">
+            <label for="emailAddress" class="f-label">Email address</label>
+            <input type="email" id="emailAddress" class="input-f" placeholder="e.g. jane.smith@gmail.com"
+              aria-label="Email address" formControlName="emailAddress" />
+            <div *ngIf="submitted && footerForm.controls['emailAddress'].invalid" class="error-message">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </div>
+        <div class="note-button">
+          <small class="note">UK Residents only, We will not spam you</small>
+          <button type="submit" class="submit-button">Get early access</button>
+        </div>
+      </form>
+
+
+      <p class="consent-text">By submitting the above information, I understand that I will receive updates from Ethos
+        (No.1) Limited on the progress of the development of the UK Bank and I consent to Ethos (No.1) Limited sending
+        me emails (including invitations to join in testing and feedback sessions) concerning the UK Bank and its
+        offerings</p>
+
+
+
+    </section>
+
+    <section [hidden]="showNotification" class="notification-container">
+      <header class="notification-header">
+        {{notificationName}}<br />
+        You are added to the waitlist
+      </header>
+      <div class="notification-image">
+        <img src="{{success}}" alt="Notification icon" class="icon" />
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2 class="quick-links-title">Our Mission</h2>
+      <div class="link-item"><a routerLink="/careers">Careers</a></div>
+      <div class="link-item"><a routerLink="/building-ethos">Building Ethos</a></div>
+      <div class="link-item"><a routerLink="/faq">Frequently Asked Questions</a></div>
+      <div class="link-item"><a routerLink="/contact-us">Contact Us</a></div>
+    </section>
+
+
+    <section class="quick-links">
+      <h2 class="quick-links-title">Follow us on</h2>
+      <div class="link-item"><a href="https://www.linkedin.com/company/ethosmoney/?originalSubdomain=uk">LinkedIn</a>
+      </div>
+      <div class="link-item"><a href="">Instagram</a></div>
+    </section>
+    <section class="quick-links">
+      <h2 class="quick-links-title">Policies</h2>
+      <div class="link-item"><a routerLink="privacy-policy">Privacy Policy</a></div>
+      <div class="link-item"><a routerLink="cookie-preferences">Cookie Preferences</a></div>
+      <div class="link-item"><a routerLink="terms-of-use">Terms of Use</a></div>
+    </section>
+
+  </main>
+  <small class="copyright">© Ethos. 2024. All rights reserved</small>
+
+</section>

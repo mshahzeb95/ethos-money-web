@@ -1,0 +1,41 @@
+<section [hidden]="!showNotification">
+  <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="f">
+      <label for="preferredName" class="visually-hidden">Preferred Name</label>
+      <input type="text" id="preferredName" formControlName="preferredName" class="input-field"
+        placeholder="e.g. Jane Smith" aria-label="Preferred Name" />
+      <div *ngIf="submitted && signupForm.controls['preferredName'].invalid" class="error-message">
+        Please enter a preferred name.
+      </div>
+    </div>
+
+    <div class="f">
+
+      <label for="emailAddress" class="visually-hidden">Email Address</label>
+      <input type="email" id="emailAddress" formControlName="emailAddress" class="input-field"
+        placeholder="e.g. jane.smith@gmail.com" aria-label="Email Address" />
+      <div *ngIf="submitted && signupForm.controls['emailAddress'].invalid" class="error-message">
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div class="info-text">UK Residents only, We will not spam you</div>
+    <button type="submit" class="submit-btn">Get early access</button>
+
+    <section class="agreement-text">
+      By submitting the above information, I understand that I will receive updates from Ethos (No.1) Limited on the
+      progress of the development of the UK Bank and I consent to Ethos (No.1) Limited sending me emails (including
+      invitations to join in testing and feedback sessions) concerning the UK Bank and its offerings
+    </section>
+  </form>
+</section>
+
+
+<section [hidden]="showNotification" class="notification-wrapper">
+  <header class="notification-header">
+    <h1>{{notificationName}}</h1>
+    <p>You are added to the waitlist</p>
+  </header>
+  <div class="notification-icon-wrapper">
+    <img src="{{success}}" alt="Notification Icon" class="notification-icon" />
+  </div>
+</section>

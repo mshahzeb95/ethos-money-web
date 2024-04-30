@@ -1,0 +1,66 @@
+.landing-page {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../assets/Default.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.banner {
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.banner-title {
+  color: var(--Secondary, #FFF);
+  font-family: Outfit;
+  font-size: 3.5vw; /* Adjust font size relative to viewport width */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.promo-section {
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.promo-title {
+  color: var(--Secondary, #FFF);
+  text-align: center;
+  font-family: Outfit;
+  font-size: 1.5vw; /* Adjust font size relative to viewport width */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .banner-title {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+  
+  .promo-title {
+    font-size: 2vw; /* Adjust font size for smaller screens */
+  }
+}
