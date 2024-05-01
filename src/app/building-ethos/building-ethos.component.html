@@ -1,1 +1,36 @@
-<p>building-ethos works!</p>
+<section class="content-container">
+    <h2 class="content-heading">{{ dynamicHeading }}</h2>
+</section>
+
+<br>
+
+<section class="information-section">
+    <p>{{ dynamicDescription }}</p>
+</section>
+
+<br>
+
+<section class="roadmap">
+    <section class="content-wraper">
+        <ng-container *ngFor="let phase of roadmapPhases">
+            <section class="roadmap-header">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                        class="blue-icon">
+                        <circle cx="18" cy="18" r="18" fill="#79C9E7" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        class="white-circle">
+                        <circle cx="6" cy="6" r="6" fill="#FBF9F0" />
+                    </svg>
+                </div>
+
+                <div class="roadmap-info">
+                    <h2 class="roadmap-title">{{ phase.title }}</h2>
+                    <p class="roadmap-description">{{ phase.description }}</p>
+                </div>
+            </section>
+        </ng-container>
+    </section>
+</section>
