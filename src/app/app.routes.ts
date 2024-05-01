@@ -10,7 +10,7 @@ import { OurMissionComponent } from './our-mission/our-mission.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export const routes: Routes = [
-  { path: 'home', component: LandingPageComponent },
+  { path: '',pathMatch:"full", component: LandingPageComponent },
 
 
   { path: 'our-mission', component: OurMissionComponent },
