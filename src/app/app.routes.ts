@@ -8,6 +8,7 @@ import { CookiePreferencesComponent } from './cookie-preferences/cookie-preferen
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { OurMissionComponent } from './our-mission/our-mission.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 export const routes: Routes = [
   { path: '',pathMatch:"full", component: LandingPageComponent },
@@ -28,4 +29,7 @@ export const routes: Routes = [
   { path: 'cookie-preferences', component: CookiePreferencesComponent },
 
   { path: 'terms-of-use', component: TermsOfUseComponent },
+
+  { path: 'blogs', component: BlogsComponent },
+
 ];
